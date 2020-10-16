@@ -37,9 +37,13 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "easepack": "^5.1.0",
     "file-loader": "^6.1.0",
+    "gsap": "^3.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-gsap": "^2.2.1",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1"
   }
 }

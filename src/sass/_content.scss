@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  &--home {
+    background-color: red;
+  }
+  &--about {
+    background-color: yellowgreen;
+  }
+  &--contact {
+    background-color: blue;
+  }
+  &--projects {
+    background-color: green;
+  }
+}
