@@ -1,8 +1,11 @@
 .content {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
   &--home {
-    background-color: red;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
   }
   &--about {
     background-color: yellowgreen;

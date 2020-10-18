@@ -10,14 +10,8 @@ const HomePage = () => {
   return (
     <>
       <div className="content content--home">
-        <div className="container demo">
-          <div className="content">
-            <div className="typing"></div>
-            <div id="large-header" className="large-header">
-              <canvas id="demo-canvas"></canvas>
-            </div>
-          </div>
-        </div>
+        <div className="typing-script"></div>
+        <canvas id="demo-canvas"></canvas>
       </div>
     </>
   );

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../layouts/Logo";
 import NavBar from "../layouts/NavBar";
+import MenuButton from "../layouts/MenuButton";
 
 const Header = () => {
+  const [toggleMenuVisibility, setToggleMenuVisibility] = useState(false);
+
+  const handleToggleMenuVisibility = () => {
+    setToggleMenuVisibility((prevValue) => !prevValue);
+  };
   return (
     <>
       <div className="header">
-        <Logo />
-        <NavBar />
+        <div className="header__row">
+          <Logo />
+          <MenuButton handleToggleMenuVisibility={handleToggleMenuVisibility} />
+        </div>
+        <NavBar toggleMenuVisibility={toggleMenuVisibility} />
       </div>
     </>
   );

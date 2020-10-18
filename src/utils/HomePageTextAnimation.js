@@ -1,5 +1,5 @@
 export const HomePageTextAnimation = () => {
-  const box = document.querySelector(".typing");
+  const box = document.querySelector(".typing-script");
   box.textContent = "";
   const text = ["Hello, friend.."];
   let wordIndex = 0;
@@ -24,6 +24,7 @@ export const HomePageTextAnimation = () => {
         }, stop);
       } else if (wordIndex === 0 || letter === "^") {
         const p = document.createElement("p");
+        p.classList.add("typing-script__text");
         box.appendChild(p);
         activeDOMElement = p;
       }
