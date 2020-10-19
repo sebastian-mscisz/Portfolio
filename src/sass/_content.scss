@@ -1,11 +1,17 @@
 .content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
   margin-top: 50px;
   &--home {
     background-size: cover;
     background-position: center center;
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+    & .canvas {
+      width: 100%;
+      position: absolute;
+    }
   }
   &--about {
     background-color: yellowgreen;
@@ -15,5 +21,13 @@
   }
   &--projects {
     background-color: green;
+  }
+}
+.content__row {
+  width: 100%;
+  &--home-my-name {
+    top: 35%;
+    color: #fefefe;
+    position: absolute;
   }
 }

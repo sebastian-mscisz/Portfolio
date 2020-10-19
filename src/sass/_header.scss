@@ -1,5 +1,4 @@
 .header {
-  overflow: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,24 +6,28 @@
   width: 100%;
   top: 0;
   z-index: 1;
+  font-family: "Inter", Times, serif;
 }
 .header__row {
   display: flex;
   width: 100%;
   box-shadow: 0 0 5px 5px #333;
-  margin-bottom: 5px;
 }
 .header__logo {
   background-color: #333;
   flex-grow: 1;
   color: white;
-  padding: 10px;
+  padding: 10px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   height: 30px;
-  & a {
+  &__link {
     color: white;
     text-decoration: none;
+  }
+  &__text {
+    width: fit-content;
+    font-style: italic;
   }
 }
 .header__droplist-enter {
@@ -52,7 +55,6 @@
   background-color: #333;
   opacity: 0.9;
   width: 100%;
-  margin-bottom: 5px;
   box-shadow: 0 0 5px 5px #333;
   &__item {
     color: white;

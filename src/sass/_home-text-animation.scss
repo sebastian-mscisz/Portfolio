@@ -1,17 +1,17 @@
 .typing-script {
-  font-family: "Roboto Mono", sans-serif;
+  font-family: monospace;
   font-size: 20px;
   font-weight: 700;
-  position: absolute;
   margin: 0;
   color: #fefefe;
   text-align: left;
-  padding: 15px;
+  box-sizing: border-box;
+  padding: 25px 15px;
   width: 100%;
   &__text {
     margin: 0;
     line-height: 150%;
-    text-shadow: 0 0 2px greenyellow;
+    text-shadow: 0 0 5px #12b8cf;
     &::before {
       content: "> ";
     }

@@ -1,7 +1,7 @@
-export const HomePageTextAnimation = () => {
+export const HomePageTextAnimation = (message) => {
   const box = document.querySelector(".typing-script");
   box.textContent = "";
-  const text = ["Hello, friend.."];
+  const text = message;
   let wordIndex = 0;
   let textIndex = 0;
   let oldTime = 0;

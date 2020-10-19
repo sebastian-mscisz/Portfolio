@@ -1,0 +1,14 @@
+.heading {
+  color: #fefefe;
+  font-family: monospace;
+  &--home {
+    font-size: 2.7em;
+    margin-left: 40px;
+  }
+}
+.heading-subtext {
+  color: #fefefe;
+  font-family: monospace;
+  font-size: 1.2em;
+  margin-left: 40px;
+}

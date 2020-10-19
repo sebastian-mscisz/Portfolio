@@ -17,13 +17,13 @@ export const HomePageAnimation = () => {
 
   function initHeader() {
     width = window.innerWidth;
-    height = window.innerHeight;
+    height = window.innerHeight - 75;
     target = { x: width / 2, y: height / 2 };
 
     largeHeader = document.getElementsByClassName("content--home");
     largeHeader[0].style.height = height + "px";
 
-    canvas = document.getElementById("demo-canvas");
+    canvas = document.getElementById("canvas");
     canvas.width = width;
     canvas.height = height;
     ctx = canvas.getContext("2d");
@@ -86,7 +86,7 @@ export const HomePageAnimation = () => {
 
   // Event handling
   function addListeners() {
-    if (!("ontouchstart" in window)) {
+    if ("ontouchstart" in window) {
       window.addEventListener("mousemove", mouseMove);
     }
     window.addEventListener("scroll", scrollCheck);
@@ -120,7 +120,7 @@ export const HomePageAnimation = () => {
 
   function resize() {
     width = window.innerWidth;
-    height = window.innerHeight;
+    height = window.innerHeight - 75;
     largeHeader[0].style.height = height + "px";
     canvas.width = width;
     canvas.height = height;
@@ -178,7 +178,16 @@ export const HomePageAnimation = () => {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(p.closest[i].x, p.closest[i].y);
-      ctx.strokeStyle = "rgba(156,217,249," + p.active + ")";
+      ctx.strokeStyle =
+        "rgba(" +
+        +(135 + Math.floor(40 * Math.random())) +
+        "," +
+        (195 + Math.floor(40 * Math.random())) +
+        "," +
+        (230 + Math.floor(40 * Math.random())) +
+        "," +
+        p.active +
+        ")";
       ctx.stroke();
     }
   }

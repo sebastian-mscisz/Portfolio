@@ -5,10 +5,12 @@ const Logo = () => {
   return (
     <>
       <div className="header__logo">
-        <NavLink className="header__logo__link" to="/" exact>
-          <p>Sebastian</p>
-          <p>Mścisz</p>
-        </NavLink>
+        <div className="header__logo__text">
+          <NavLink className="header__logo__link" to="/" exact>
+            <p>Sebastian</p>
+            <p>Mścisz</p>
+          </NavLink>
+        </div>
       </div>
     </>
   );
