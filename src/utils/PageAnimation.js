@@ -1,6 +1,6 @@
 import { TweenLite, Circ } from "gsap";
 
-export const HomePageAnimation = () => {
+export const PageAnimation = () => {
   let width,
     height,
     largeHeader,
@@ -20,7 +20,7 @@ export const HomePageAnimation = () => {
     height = window.innerHeight - 75;
     target = { x: width / 2, y: height / 2 };
 
-    largeHeader = document.getElementsByClassName("content--home");
+    largeHeader = document.getElementsByClassName("content");
     largeHeader[0].style.height = height + "px";
 
     canvas = document.getElementById("canvas");
@@ -86,9 +86,10 @@ export const HomePageAnimation = () => {
 
   // Event handling
   function addListeners() {
-    if ("ontouchstart" in window) {
-      window.addEventListener("mousemove", mouseMove);
-    }
+    // if (!"ontouchstart" in window) {
+    //   window.addEventListener("mousemove", mouseMove);
+    // }
+    window.addEventListener("mousemove", mouseMove);
     window.addEventListener("scroll", scrollCheck);
     window.addEventListener("resize", resize);
   }

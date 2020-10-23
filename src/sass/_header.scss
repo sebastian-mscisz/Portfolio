@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   font-family: "Inter", Times, serif;
 }
 .header__row {
@@ -16,11 +16,16 @@
 .header__logo {
   background-color: #333;
   flex-grow: 1;
-  color: white;
+  color: #fefefe;
   padding: 10px 16px;
   text-decoration: none;
   font-size: 16px;
   height: 30px;
+  transition: all 0.2s linear;
+  &:hover {
+    color: white;
+    font-size: 1.025em;
+  }
   &__link {
     color: white;
     text-decoration: none;
@@ -30,40 +35,26 @@
     font-style: italic;
   }
 }
-.header__droplist-enter {
-  transform: scaleY(0);
-  transform-origin: top;
-  width: 100%;
-}
-.header__droplist-enter-active {
-  transform: scaleY(1);
-  transition: all 700ms;
-}
-.header__droplist-enter-done {
-  width: 100%;
-}
-.header__droplist-exit {
-  transform: scaleY(1);
-  transform-origin: top;
-  width: 100%;
-}
-.header__droplist-exit-active {
-  transform: scaleY(0);
-  transition: all 700ms;
-}
 .header__menu {
   background-color: #333;
   opacity: 0.9;
   width: 100%;
   box-shadow: 0 0 5px 5px #333;
   &__item {
-    color: white;
+    color: #fefefe;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     display: block;
+    &:hover {
+      opacity: 1;
+      background-color: lighten(#333, 5%);
+      color: white;
+      transition: all 0.5s;
+    }
   }
   &__button {
+    cursor: pointer;
     height: 30px;
     align-items: center;
     display: flex;

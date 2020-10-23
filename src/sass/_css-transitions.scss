@@ -1,0 +1,33 @@
+.header__droplist-enter {
+  transform: scaleY(0);
+  transform-origin: top;
+  width: 100%;
+}
+.header__droplist-enter-active {
+  transform: scaleY(1);
+  transition: all 700ms;
+}
+.header__droplist-enter-done {
+  width: 100%;
+}
+.header__droplist-exit {
+  transform: scaleY(1);
+  transform-origin: top;
+  width: 100%;
+}
+.header__droplist-exit-active {
+  transform: scaleY(0);
+  transition: all 700ms;
+}
+.content__transition {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.content__transition-appear {
+  opacity: 0;
+}
+.content__transition-appear-done {
+  opacity: 1;
+  transition: all 700ms linear;
+}

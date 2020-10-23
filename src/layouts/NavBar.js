@@ -7,7 +7,6 @@ const NavBar = (props) => {
     <>
       <CSSTransition
         in={props.toggleMenuVisibility}
-        appear={props.toggleMenuVisibility}
         timeout={700}
         classNames="header__droplist"
         unmountOnExit
@@ -16,6 +15,9 @@ const NavBar = (props) => {
           <div className="header__menu">
             <NavLink to="/about" className="header__menu__item" exact>
               O mnie
+            </NavLink>
+            <NavLink to="/skills" className="header__menu__item" exact>
+              Umiejętności
             </NavLink>
             <NavLink to="/projects" className="header__menu__item" exact>
               Projekty
