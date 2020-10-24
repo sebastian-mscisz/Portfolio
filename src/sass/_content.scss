@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
+  overflow: auto;
   margin-top: 50px;
   margin-bottom: -5px;
   background-size: cover;
@@ -67,6 +68,7 @@
   box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.8);
   &--contact {
     text-align: left;
+    font-size: 14px;
     margin: 10px 0 10px 10%;
     background-color: transparent;
     box-shadow: 0 0 0 0;

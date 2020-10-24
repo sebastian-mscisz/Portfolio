@@ -42,6 +42,7 @@ export const PageAnimation = () => {
         points.push(p);
       }
     }
+    console.log(points);
 
     // for each point find the 5 closest points
     for (let i = 0; i < points.length; i++) {
@@ -126,6 +127,15 @@ export const PageAnimation = () => {
     canvas.width = width;
     canvas.height = height;
   }
+
+  let isBeingResized;
+  window.onresize = function () {
+    clearTimeout(isBeingResized);
+    isBeingResized = setTimeout(() => {
+      initHeader();
+      initAnimation();
+    }, 200);
+  };
 
   // animation
   function initAnimation() {

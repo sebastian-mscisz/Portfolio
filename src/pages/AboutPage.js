@@ -12,6 +12,7 @@ const AboutPage = () => {
         <CSSTransition
           in={true}
           appear
+          timeout={700}
           classNames="content__transition"
           unmountOnExit
         >
