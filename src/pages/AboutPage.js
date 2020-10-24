@@ -12,7 +12,7 @@ const AboutPage = () => {
         <CSSTransition
           in={true}
           appear
-          timeout={700}
+          timeout={0}
           classNames="content__transition"
           unmountOnExit
         >
@@ -36,7 +36,7 @@ const AboutPage = () => {
                 officia, nisi ea, numquam accusamus.
               </p>
             </div>
-            <div className="content__row">
+            <div className="content__row content__row--last">
               <p className="content__row__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
                 esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis

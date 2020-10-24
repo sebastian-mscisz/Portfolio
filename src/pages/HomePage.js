@@ -22,6 +22,7 @@ const HomePage = () => {
           <CSSTransition
             in={true}
             appear
+            timeout={0}
             classNames="content__transition"
             unmountOnExit
           >

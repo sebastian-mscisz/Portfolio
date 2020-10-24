@@ -11,7 +11,7 @@ const ProjectsPage = () => {
       <div className="content content--projects">
         <CSSTransition
           in={true}
-          timeout={700}
+          timeout={0}
           appear
           classNames="content__transition"
           unmountOnExit
@@ -49,7 +49,7 @@ const ProjectsPage = () => {
             <div className="content__row">
               <h2 className="heading heading--h2">Strona portfolio</h2>
             </div>
-            <div className="content__row">
+            <div className="content__row content__row--last">
               <p className="content__row__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
                 esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis

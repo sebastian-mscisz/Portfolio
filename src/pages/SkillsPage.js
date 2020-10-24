@@ -13,12 +13,21 @@ const SkillsPage = () => {
         <CSSTransition
           in={true}
           appear
+          timeout={0}
           classNames="content__transition"
           unmountOnExit
         >
           <div className="content__transition">
             <div className="content__row">
               <h1 className="heading">Moje umiejętności</h1>
+            </div>
+            <div className="content__row">
+              <p className="content__row__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis
+                cumque tenetur, ad excepturi et temporibus aliquid laborum
+                officia, nisi ea, numquam accusamus.
+              </p>
             </div>
             <div className="content__row">
               <h2 className="heading heading--h2">Technologie</h2>
@@ -45,7 +54,7 @@ const SkillsPage = () => {
                 <span className="fab fa-bootstrap tile__icon"></span>
               </div>
             </div>
-            <div className="content__row content__row--skills">
+            <div className="content__row content__row--skills content__row--last">
               <div className="tile">
                 <span className="fab fa-github tile__icon"></span>
               </div>

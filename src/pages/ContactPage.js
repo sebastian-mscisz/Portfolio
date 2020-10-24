@@ -12,6 +12,7 @@ const ContactPage = () => {
         <CSSTransition
           in={true}
           appear
+          timeout={0}
           classNames="content__transition"
           unmountOnExit
         >
@@ -38,7 +39,7 @@ const ContactPage = () => {
             <div className="content__row">
               <h2 className="heading heading--h2">Skontaktuj się ze mną!</h2>
             </div>
-            <div className="content__row content__row--form">
+            <div className="content__row content__row--form content__row--last">
               <form className="form">
                 <input
                   className="form__input"
