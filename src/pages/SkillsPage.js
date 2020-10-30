@@ -54,7 +54,7 @@ const SkillsPage = () => {
                 <span className="fab fa-bootstrap tile__icon"></span>
               </div>
             </div>
-            <div className="content__row content__row--skills content__row--last">
+            <div className="content__row content__row--skills">
               <div className="tile">
                 <span className="fab fa-github tile__icon"></span>
               </div>

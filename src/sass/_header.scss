@@ -11,10 +11,10 @@
 .header__row {
   display: flex;
   width: 100%;
-  box-shadow: 0 0 5px 5px #333;
+  box-shadow: 0 0 5px 5px #323639;
 }
 .header__logo {
-  background-color: #333;
+  background-color: #323639;
   flex-grow: 1;
   color: #fefefe;
   padding: 10px 16px;
@@ -36,10 +36,10 @@
   }
 }
 .header__menu {
-  background-color: #333;
-  opacity: 0.9;
+  background-color: #323639;
+  opacity: 0.97;
   width: 100%;
-  box-shadow: 0 0 5px 5px #333;
+  box-shadow: 0 0 5px 5px #323639;
   &__item {
     color: #fefefe;
     padding: 14px 16px;
@@ -48,7 +48,7 @@
     display: block;
     &:hover {
       opacity: 1;
-      background-color: lighten(#333, 5%);
+      background-color: lighten(#323639, 5%);
       color: white;
       transition: all 0.5s;
     }
@@ -59,7 +59,7 @@
     align-items: center;
     display: flex;
     padding: 10px;
-    background-color: #333;
+    background-color: #323639;
   }
   &__icon {
     color: white;

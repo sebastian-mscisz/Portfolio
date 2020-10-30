@@ -42,7 +42,6 @@ export const PageAnimation = () => {
         points.push(p);
       }
     }
-    console.log(points);
 
     // for each point find the 5 closest points
     for (let i = 0; i < points.length; i++) {
@@ -79,7 +78,7 @@ export const PageAnimation = () => {
       let c = new Circle(
         points[i],
         2 + Math.random() * 2,
-        "rgba(255,255,255,0.3)"
+        "rgba(18, 184, 207, 0.2)"
       );
       points[i].circle = c;
     }
@@ -189,16 +188,7 @@ export const PageAnimation = () => {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(p.closest[i].x, p.closest[i].y);
-      ctx.strokeStyle =
-        "rgba(" +
-        +(135 + Math.floor(40 * Math.random())) +
-        "," +
-        (195 + Math.floor(40 * Math.random())) +
-        "," +
-        (230 + Math.floor(40 * Math.random())) +
-        "," +
-        p.active +
-        ")";
+      ctx.strokeStyle = "rgba(118, 184, 207," + p.active + ")";
       ctx.stroke();
     }
   }
@@ -217,7 +207,7 @@ export const PageAnimation = () => {
       if (!_this.active) return;
       ctx.beginPath();
       ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-      ctx.fillStyle = "rgba(156,217,249," + _this.active + ")";
+      ctx.fillStyle = "rgba(118, 184, 207," + _this.active + ")";
       ctx.fill();
     };
   }

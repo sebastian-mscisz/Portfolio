@@ -8,7 +8,8 @@
   margin-bottom: -5px;
   background-size: cover;
   background-position: center center;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+  // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+  background-image: url("../assets/background.jpg");
   & .canvas {
     width: 100%;
     position: absolute;
@@ -52,11 +53,19 @@
     margin-left: 10%;
     margin-right: 10%;
   }
+  &--projects {
+    background-color: rgba(50, 54, 57, 0.5);
+    border: 1px solid rgba(254, 254, 254, 0.3);
+    border-radius: 25px;
+    padding: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
   &--form {
     margin-left: 10%;
     margin-right: 10%;
   }
-  &--last {
+  &:last-child {
     margin-bottom: 20px;
   }
 }
@@ -67,8 +76,8 @@
   font-family: "Inter";
   font-size: 16px;
   z-index: 1;
-  background-color: rgba(51, 51, 51, 0.5);
-  box-shadow: 0 0 5px 5px rgba(51, 51, 51, 0.5);
+  background-color: rgba(50, 54, 57, 0.5);
+  box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.5);
   &--contact {
     text-align: left;
     font-size: 14px;
@@ -80,6 +89,21 @@
       text-decoration: none;
     }
   }
+  &--projects {
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+.content__row__image {
+  width: 100%;
+}
+.content__row__button {
+  color: #fefefe;
+  border: 2px solid rgba(254, 254, 254, 0.5);
+  background: transparent;
+  padding: 4px 8px;
+  border-radius: 25px;
+  margin: 5px;
 }
 .tile {
   margin: 5px;

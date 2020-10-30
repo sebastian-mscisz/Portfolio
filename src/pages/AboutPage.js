@@ -36,7 +36,7 @@ const AboutPage = () => {
                 officia, nisi ea, numquam accusamus.
               </p>
             </div>
-            <div className="content__row content__row--last">
+            <div className="content__row">
               <p className="content__row__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
                 esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis

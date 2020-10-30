@@ -19,6 +19,27 @@
   transform: scaleY(0);
   transition: all 700ms;
 }
+.project-section-toggle-enter {
+  transform: scaleY(0);
+  transform-origin: top;
+  width: 100%;
+}
+.project-section-toggle-enter-active {
+  transform: scaleY(1);
+  transition: all 400ms;
+}
+.project-section-toggle-enter-done {
+  width: 100%;
+}
+.project-section-toggle-exit {
+  transform: scaleY(1);
+  transform-origin: top;
+  width: 100%;
+}
+.project-section-toggle-exit-active {
+  transform: scaleY(0);
+  transition: all 400ms;
+}
 .content__transition {
   display: flex;
   flex-wrap: wrap;

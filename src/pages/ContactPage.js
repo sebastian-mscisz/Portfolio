@@ -39,7 +39,7 @@ const ContactPage = () => {
             <div className="content__row">
               <h2 className="heading heading--h2">Skontaktuj się ze mną!</h2>
             </div>
-            <div className="content__row content__row--form content__row--last">
+            <div className="content__row content__row--form">
               <form className="form">
                 <input
                   className="form__input"

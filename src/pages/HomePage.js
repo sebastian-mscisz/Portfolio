@@ -22,11 +22,12 @@ const HomePage = () => {
           <CSSTransition
             in={true}
             appear
-            timeout={0}
+            timeout={3700}
             classNames="content__transition"
             unmountOnExit
           >
             <div className="content__transition">
+              <p className="heading-subtext">I am</p>
               <h1 className="heading heading--home">
                 Sebastian
                 <br />
