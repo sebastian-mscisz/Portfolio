@@ -4,12 +4,26 @@
   font-size: 2.2em;
   margin: 20px 0;
   text-align: center;
+  @include for-size(tablet) {
+    font-size: 3.1em;
+    margin: 30px 0;
+  }
+  @include for-size(laptop) {
+    font-size: 3.8em;
+  }
   &--home {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 40px;
     font-size: 2.7em;
     text-align: left;
+    @include for-size(tablet) {
+      margin-left: 10%;
+      font-size: 3.6em;
+    }
+    @include for-size(laptop) {
+      font-size: 5em;
+    }
   }
   &--projects {
     margin-bottom: 10px;
@@ -17,6 +31,13 @@
   &--h2 {
     margin: 10px 0;
     font-size: 2em;
+    @include for-size(tablet) {
+      font-size: 2.9em;
+      margin: 25px 0;
+    }
+    @include for-size(laptop) {
+      font-size: 3.4em;
+    }
   }
 }
 .heading-subtext {
@@ -25,4 +46,11 @@
   font-size: 1.2em;
   margin: 5px 0 5px 40px;
   width: 100%;
+  @include for-size(tablet) {
+    margin-left: 10%;
+    font-size: 1.9em;
+  }
+  @include for-size(laptop) {
+    font-size: 2.4em;
+  }
 }

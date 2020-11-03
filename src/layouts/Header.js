@@ -15,8 +15,8 @@ const Header = () => {
         <div className="header__row">
           <Logo />
           <MenuButton handleToggleMenuVisibility={handleToggleMenuVisibility} />
+          <NavBar toggleMenuVisibility={toggleMenuVisibility} />
         </div>
-        <NavBar toggleMenuVisibility={toggleMenuVisibility} />
       </div>
     </>
   );

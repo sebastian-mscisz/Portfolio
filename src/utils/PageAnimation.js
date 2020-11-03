@@ -16,8 +16,16 @@ export const PageAnimation = () => {
   addListeners();
 
   function initHeader() {
+    let wh;
+    if (window.innerWidth < 767) {
+      wh = 75;
+    } else if (window.innerWidth < 991) {
+      wh = 110;
+    } else wh = 150;
+
     width = window.innerWidth;
-    height = window.innerHeight - 75;
+    console.log(window.innerHeight);
+    height = window.innerHeight - wh;
     target = { x: width / 2, y: height / 2 };
 
     largeHeader = document.getElementsByClassName("content");
@@ -32,7 +40,7 @@ export const PageAnimation = () => {
     let pointNumber;
     if (window.innerWidth < 500) {
       pointNumber = 10;
-    } else pointNumber = 20;
+    } else pointNumber = 25;
     points = [];
     for (let x = 0; x < width; x = x + width / pointNumber) {
       for (let y = 0; y < height; y = y + height / pointNumber) {
@@ -120,8 +128,17 @@ export const PageAnimation = () => {
   }
 
   function resize() {
+    let wh;
+    if (window.innerWidth < 767) {
+      wh = 75;
+    } else if (window.innerWidth < 991) {
+      wh = 110;
+    } else if (window.innerWidth < 1300) {
+      wh = 110;
+    } else wh = 150;
+
     width = window.innerWidth;
-    height = window.innerHeight - 75;
+    height = window.innerHeight - wh;
     largeHeader[0].style.height = height + "px";
     canvas.width = width;
     canvas.height = height;

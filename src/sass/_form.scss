@@ -8,8 +8,20 @@
     padding: 5px;
     width: 100%;
     border-radius: 0.5em;
+    @include for-size(tablet) {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 20px;
+    }
+    @include for-size(laptop) {
+      padding: 15px;
+      font-size: 24px;
+    }
     &--area {
       min-height: 100px;
+      @include for-size(tablet) {
+        min-height: 150px;
+      }
     }
   }
   &__button {
@@ -21,6 +33,14 @@
     font-family: monospace;
     color: #fefefe;
     transition: all 0.5s;
+    @include for-size(tablet) {
+      padding: 8px 12px;
+      font-size: 1.4em;
+    }
+    @include for-size(laptop) {
+      padding: 12px 16px;
+      font-size: 1.8em;
+    }
     &:hover {
       background-color: darken(#333, 5%);
       border: 3px solid lighten(#333, 20%);

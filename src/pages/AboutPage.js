@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { PageAnimation } from "../utils/PageAnimation";
 import { CSSTransition } from "react-transition-group";
+import myImage from "../assets/me.png";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -22,26 +23,41 @@ const AboutPage = () => {
             </div>
             <div className="content__row">
               <p className="content__row__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis
-                cumque tenetur, ad excepturi et temporibus aliquid laborum
-                officia, nisi ea, numquam accusamus.
+                <img
+                  className="content__row__image content__row__image--about"
+                  src={myImage}
+                />
+                Nazywam się Sebastian Mścisz i jestem początkującym Front-End
+                deweloperem. Posiadam doświadczenie na stanowisku junior web
+                developer, gdzie do moich obowiązków i pracy należało m.in.
+                wprowadzenie zmian technicznych na serwisach klientów,
+                optymalizacja kodu, wprowadzanie zmian za pomocą wielu systemów
+                zarządzania treścią, a także optymalizowanie witryn pod kątem
+                wyszukiwarek internetowych. W pracy z React jestem samoukiem
+                wykonując własne niekomercyjne projekty oraz wspomagając się
+                internetowymi kursami, poradnikami oraz dokumentacją.
               </p>
-            </div>
-            <div className="content__row">
               <p className="content__row__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis
-                cumque tenetur, ad excepturi et temporibus aliquid laborum
-                officia, nisi ea, numquam accusamus.
+                Ukończyłem pierwszy stopień studiów stacjonarnych z tytułem
+                inżyniera na kierunku inżynierii systemów na Politechnice
+                Wrocławskiej oraz dalej kontynuuję naukę na drugim stopniu tego
+                samego kierunku. Tematem mojej pracy inżynierskiej był system
+                inteligentnego domu oparty na systemie Arduino.
               </p>
-            </div>
-            <div className="content__row">
               <p className="content__row__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-                esse nemo aspernatur fuga, voluptate iure perspiciatis? Quis
-                cumque tenetur, ad excepturi et temporibus aliquid laborum
-                officia, nisi ea, numquam accusamus.
+                Styczność z tworzeniem stron pierwszy raz miałem w technikum w
+                2013, jednak wtedy nie czułem jakoby było to coś co chciałbym
+                robić zawodowo. Dopiero podczas odbywanych studenckich praktyk
+                jako web developer zainteresowanie to zostało u mnie wzbudzone
+                na nowo co doprowadziło mnie do momentu, w którym jestem teraz.
+              </p>
+              <p className="content__row__text">
+                Z zamiłowania psiarz, a z zainteresowań jestem miłośnikiem
+                książek, gier i filmów z gatunku fantastyki. Lubię podróżować i
+                zwiedzać rożne zakątki i miasta Polski, w których jeszcze nie
+                byłem. Jestem również wielkim fanem rozwoju sztucznej
+                inteligencji i zaciekawieniem przyglądam się coraz to nowym
+                technologiom i postępom w tej dziedzinie.
               </p>
             </div>
           </div>

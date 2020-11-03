@@ -8,29 +8,24 @@
   margin-bottom: -5px;
   background-size: cover;
   background-position: center center;
-  // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
   background-image: url("../assets/background.jpg");
+  @include for-size(tablet) {
+    margin-top: 75px;
+  }
+  @include for-size(laptop) {
+    margin-top: 100px;
+  }
   & .canvas {
     width: 100%;
     position: absolute;
   }
   &--home {
-    // background-size: cover;
-    // background-position: center center;
-    // background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
-    // & .canvas {
-    //   width: 100%;
-    //   position: absolute;
-    // }
   }
   &--about {
-    // background-color: yellowgreen;
   }
   &--contact {
-    // background-color: blue;
   }
   &--projects {
-    // background-color: green;
   }
 }
 .content__row {
@@ -60,6 +55,10 @@
     padding: 3px;
     margin-bottom: 5px;
     text-align: center;
+    @include for-size(tablet) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
   }
   &--form {
     margin-left: 10%;
@@ -70,32 +69,58 @@
   }
 }
 .content__row__text {
-  margin-top: 5px;
+  padding-top: 8px;
   text-align: justify;
   color: #fefefe;
   font-family: "Inter";
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 16px;
   z-index: 1;
   background-color: rgba(50, 54, 57, 0.5);
   box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.5);
+  @include for-size(tablet) {
+    font-size: 22px;
+    line-height: 26px;
+    padding: 10px;
+  }
+  @include for-size(laptop) {
+    font-size: 26px;
+    line-height: 28px;
+  }
   &--contact {
     text-align: left;
-    font-size: 14px;
     margin: 10px 0 10px 10%;
     background-color: transparent;
     box-shadow: 0 0 0 0;
+    @include for-size(tablet) {
+      margin: 10px 0;
+      text-align: center;
+    }
     & a {
       color: #fefefe;
       text-decoration: none;
     }
   }
   &--projects {
-    font-size: 14px;
     margin: 5px;
+  }
+  &--skills {
+    text-align: left;
   }
 }
 .content__row__image {
   width: 100%;
+  &--about {
+    width: 40%;
+    float: right;
+    margin: 0 0 6px 6px;
+    @include for-size(tablet) {
+      margin: 0 0 15px 15px;
+    }
+    @include for-size(laptop) {
+      margin: 0 0 25px 25px;
+    }
+  }
 }
 .content__row__button {
   color: #fefefe;
@@ -104,6 +129,16 @@
   padding: 4px 8px;
   border-radius: 25px;
   margin: 5px;
+  @include for-size(tablet) {
+    margin: 10px;
+    padding: 8px 12px;
+    font-size: 1.2em;
+  }
+  @include for-size(laptop) {
+    margin: 10px;
+    padding: 12px 14px;
+    font-size: 1.4em;
+  }
 }
 .tile {
   margin: 5px;
@@ -115,6 +150,14 @@
   z-index: 1;
   width: 70px;
   height: 70px;
+  @include for-size(tablet) {
+    width: 110px;
+    height: 110px;
+  }
+  @include for-size(laptop) {
+    width: 125px;
+    height: 125px;
+  }
   &:hover {
     background-color: rgba(255, 255, 255, 1);
     animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;

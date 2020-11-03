@@ -18,9 +18,9 @@ const ProjectSection = (props) => {
           unmountOnExit
         >
           <div>
-            <p className="content__row__text content__row__text--projects">
-              {props.text}
-            </p>
+            {/* <p className="content__row__text content__row__text--projects"> */}
+            {props.text}
+            {/* </p> */}
           </div>
         </CSSTransition>
         <button

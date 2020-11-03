@@ -8,6 +8,13 @@
   box-sizing: border-box;
   padding: 25px 15px;
   width: 100%;
+  @include for-size(tablet) {
+    font-size: 30px;
+  }
+  @include for-size(laptop) {
+    font-size: 40px;
+    padding: 60px 5%;
+  }
   &__text {
     margin: 0;
     line-height: 150%;
