@@ -8,11 +8,13 @@ import portfolioImage from "../assets/portfolio-image.png";
 
 const ProjectsPage = () => {
   useEffect(() => {
-    PageAnimation();
+    setTimeout(() => {
+      PageAnimation();
+    }, 300);
   });
   return (
     <>
-      <div className="content content--projects">
+      <div className="content">
         <CSSTransition
           in={true}
           timeout={0}

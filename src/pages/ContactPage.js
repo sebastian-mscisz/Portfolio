@@ -8,7 +8,7 @@ const ContactPage = () => {
   });
   return (
     <>
-      <div className="content content--contact">
+      <div className="content">
         <CSSTransition
           in={true}
           appear
@@ -23,16 +23,22 @@ const ContactPage = () => {
             <div className="content__row">
               <p className="content__row__text  content__row__text--contact">
                 <a href="mailto:name@email.com">
-                  <span className="fas fa-envelope"></span>&nbsp;
-                  sebastian.mscisz96@gmail.com
+                  <span className="font-icon font-icon--contact fas fa-envelope"></span>
+                  &nbsp;
+                  <span className="font-icon__link">
+                    sebastian.mscisz96@gmail.com
+                  </span>
                 </a>
               </p>
             </div>
             <div className="content__row">
               <p className="content__row__text  content__row__text--contact">
                 <a href="https://github.com/sebastian-mscisz">
-                  <span className="fab fa-github"></span>&nbsp;
-                  github.com/sebastian-mscisz
+                  <span className="font-icon font-icon--contact fab fa-github"></span>
+                  &nbsp;
+                  <span className="font-icon__link">
+                    github.com/sebastian-mscisz
+                  </span>
                 </a>
               </p>
             </div>

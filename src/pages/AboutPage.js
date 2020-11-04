@@ -9,7 +9,7 @@ const AboutPage = () => {
   });
   return (
     <>
-      <div className="content content--about">
+      <div className="content">
         <CSSTransition
           in={true}
           appear

@@ -4,28 +4,14 @@
   flex-wrap: wrap;
   align-content: flex-start;
   overflow: auto;
-  margin-top: 50px;
-  margin-bottom: -5px;
+  flex-grow: 1;
   background-size: cover;
   background-position: center center;
   background-image: url("../assets/background.jpg");
-  @include for-size(tablet) {
-    margin-top: 75px;
-  }
-  @include for-size(laptop) {
-    margin-top: 100px;
-  }
+  background-repeat: repeat;
   & .canvas {
     width: 100%;
     position: absolute;
-  }
-  &--home {
-  }
-  &--about {
-  }
-  &--contact {
-  }
-  &--projects {
   }
 }
 .content__row {
@@ -33,6 +19,15 @@
   z-index: 1;
   margin-left: 5%;
   margin-right: 5%;
+  transition: all 300ms;
+  @include for-size(laptop) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  @include for-size(desktop) {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
   &--home-my-name {
     top: 35%;
     color: #fefefe;
@@ -42,11 +37,29 @@
     margin-right: 0;
   }
   &--skills {
+    background-color: rgba(50, 54, 57, 0.5);
+    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.5);
+    @include for-size(desktop) {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  }
+  &--technologies {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
-    margin-left: 10%;
-    margin-right: 10%;
+    @include for-size(tablet) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    @include for-size(laptop) {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+    @include for-size(desktop) {
+      margin-left: 30%;
+      margin-right: 30%;
+    }
   }
   &--projects {
     background-color: rgba(50, 54, 57, 0.5);
@@ -59,10 +72,14 @@
       margin-top: 10px;
       margin-bottom: 10px;
     }
+    @include for-size(desktop) {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
   }
   &--form {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
   }
   &:last-child {
     margin-bottom: 20px;
@@ -73,43 +90,59 @@
   text-align: justify;
   color: #fefefe;
   font-family: "Inter";
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1.2rem;
   z-index: 1;
-  background-color: rgba(50, 54, 57, 0.5);
-  box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.5);
+  background-color: rgba(50, 54, 57, 0.8);
+  box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
   @include for-size(tablet) {
-    font-size: 22px;
-    line-height: 26px;
     padding: 10px;
   }
   @include for-size(laptop) {
-    font-size: 26px;
-    line-height: 28px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
   }
   &--contact {
-    text-align: left;
-    margin: 10px 0 10px 10%;
+    text-align: center;
+    margin: 10px 0;
     background-color: transparent;
     box-shadow: 0 0 0 0;
-    @include for-size(tablet) {
-      margin: 10px 0;
-      text-align: center;
-    }
     & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: fit-content;
       color: #fefefe;
       text-decoration: none;
     }
   }
   &--projects {
     margin: 5px;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    font-size: 0.9rem;
+    @include for-size(tablet) {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+    @include for-size(laptop) {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+    @include for-size(desktop) {
+      margin: 0 10%;
+    }
   }
   &--skills {
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
     text-align: left;
   }
 }
 .content__row__image {
   width: 100%;
+  object-fit: contain;
   &--about {
     width: 40%;
     float: right;
@@ -121,23 +154,67 @@
       margin: 0 0 25px 25px;
     }
   }
+  &--projects {
+    @include for-size(desktop) {
+      width: 70%;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  }
 }
 .content__row__button {
   color: #fefefe;
   border: 2px solid rgba(254, 254, 254, 0.5);
-  background: transparent;
+  background-color: rgba(50, 54, 57, 0.8);
   padding: 4px 8px;
   border-radius: 25px;
+  font-size: 0.8rem;
   margin: 5px;
+  width: 60px;
+  transition: all 300ms linear;
   @include for-size(tablet) {
     margin: 10px;
-    padding: 8px 12px;
-    font-size: 1.2em;
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    width: 80px;
   }
   @include for-size(laptop) {
-    margin: 10px;
-    padding: 12px 14px;
-    font-size: 1.4em;
+    font-size: 1rem;
+  }
+  &:hover {
+    &:hover {
+      background-color: darken(rgba(50, 54, 57, 0.8), 10%);
+      border: 2px solid lighten(rgba(50, 54, 57, 0.8), 20%);
+      color: darken(#fefefe, 15%);
+    }
+  }
+}
+.font-icon {
+  font-size: 1em;
+  padding: 2px;
+  &--contact {
+    padding: 5px;
+    font-size: 1.5em;
+  }
+  &:hover {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    color: darken(#333, 15%);
+    background-color: #fefefe;
+    border-radius: 50%;
+    transition: all 300ms linear;
+  }
+  &__link {
+    font-size: 1em;
+    padding: 5px;
+    &:hover {
+      animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      color: darken(#333, 15%);
+      background-color: #fefefe;
+      border-radius: 15px;
+      transition: all 300ms linear;
+    }
   }
 }
 .tile {
@@ -150,13 +227,14 @@
   z-index: 1;
   width: 70px;
   height: 70px;
+  transition: all 300ms;
   @include for-size(tablet) {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
   }
   @include for-size(laptop) {
-    width: 125px;
-    height: 125px;
+    width: 110px;
+    height: 110px;
   }
   &:hover {
     background-color: rgba(255, 255, 255, 1);

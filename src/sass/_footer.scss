@@ -5,6 +5,7 @@
   color: #fefefe;
   display: flex;
   flex-wrap: wrap;
+  font-size: 0.9rem;
   justify-content: center;
   align-items: center;
   height: 20px;
@@ -13,21 +14,10 @@
   font-family: "Inter";
   z-index: 1;
   @include for-size(tablet) {
-    height: 30px;
-    font-size: 1.3em;
-  }
-  @include for-size(laptop) {
-    height: 45px;
-    font-size: 1.4em;
+    font-size: 1rem;
   }
   & a {
     text-decoration: none;
     color: inherit;
-  }
-  &__copy {
-    font-size: 0.9em;
-  }
-  &__icon {
-    font-size: 1.2em;
   }
 }

@@ -1,25 +1,15 @@
 .header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 50px;
-  position: fixed;
+  height: 60px;
   width: 100%;
-  @include for-size(tablet) {
-    height: 75px;
-  }
-  @include for-size(laptop) {
-    height: 100px;
-  }
   top: 0;
+  position: sticky;
   z-index: 2;
   font-family: "Inter", Times, serif;
 }
 .header__row {
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  // box-shadow: 0 0 5px 5px #323639;
+  flex-wrap: wrap;
 }
 .header__droplist {
   width: 100%;
@@ -45,9 +35,10 @@
     box-shadow: 0 0 5px 5px #323639;
     background-color: #323639;
     transition: transform 0ms;
+    padding-right: 5%;
   }
-  @include for-size(laptop) {
-    padding-right: 50px;
+  @include for-size(desktop) {
+    padding-right: 10%;
   }
 }
 
@@ -57,17 +48,18 @@
   background-color: #323639;
   flex-grow: 1;
   color: #fefefe;
-  padding: 10px 16px;
+  padding-left: 15px;
   text-decoration: none;
-  font-size: 16px;
+  height: 60px;
+  font-size: 1rem;
   transition: all 0.2s linear;
   box-shadow: 0 0 5px 5px #323639;
   @include for-size(tablet) {
-    font-size: 22px;
     padding-left: 5%;
+    font-size: 1.2rem;
   }
-  @include for-size(laptop) {
-    font-size: 26px;
+  @include for-size(desktop) {
+    padding-left: 10%;
   }
   &:hover {
     color: white;
@@ -94,20 +86,17 @@
     color: #fefefe;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1rem;
     display: block;
+    border-bottom: 1px solid transparent;
     @include for-size(tablet) {
-      font-size: 22px;
-    }
-    @include for-size(laptop) {
-      font-size: 26px;
+      font-size: 1.2rem;
     }
     &:hover {
       opacity: 1;
       background-color: lighten(#323639, 5%);
       color: white;
-      border-bottom: 1px solid transparent;
-      transition: all 0.5s;
+      transition: all 500ms linear;
       @include for-size(tablet) {
         background-color: inherit;
         border-bottom: 1px solid #fefefe;
@@ -118,7 +107,8 @@
     cursor: pointer;
     align-items: center;
     display: flex;
-    padding: 10px;
+    height: 60px;
+    padding: 0 15px;
     background-color: #323639;
     box-shadow: 0 0 5px 5px #323639;
     @include for-size(tablet) {

@@ -12,7 +12,7 @@ const HomePage = () => {
   });
   return (
     <>
-      <div className="content content--home">
+      <div className="content">
         <div className="content__row">
           <div className="typing-script">
             <p className="typing-script__text"></p>

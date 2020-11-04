@@ -16,20 +16,10 @@ export const PageAnimation = () => {
   addListeners();
 
   function initHeader() {
-    let wh;
-    if (window.innerWidth < 767) {
-      wh = 75;
-    } else if (window.innerWidth < 991) {
-      wh = 110;
-    } else wh = 150;
-
-    width = window.innerWidth;
-    console.log(window.innerHeight);
-    height = window.innerHeight - wh;
-    target = { x: width / 2, y: height / 2 };
-
     largeHeader = document.getElementsByClassName("content");
-    largeHeader[0].style.height = height + "px";
+    width = window.innerWidth;
+    height = largeHeader[0].offsetHeight + 25;
+    target = { x: width / 2, y: height / 2 };
 
     canvas = document.getElementById("canvas");
     canvas.width = width;
@@ -128,18 +118,9 @@ export const PageAnimation = () => {
   }
 
   function resize() {
-    let wh;
-    if (window.innerWidth < 767) {
-      wh = 75;
-    } else if (window.innerWidth < 991) {
-      wh = 110;
-    } else if (window.innerWidth < 1300) {
-      wh = 110;
-    } else wh = 150;
-
     width = window.innerWidth;
-    height = window.innerHeight - wh;
-    largeHeader[0].style.height = height + "px";
+    height = largeHeader[0].offsetHeight;
+
     canvas.width = width;
     canvas.height = height;
   }

@@ -10,7 +10,10 @@ const ProjectSection = (props) => {
     <>
       <div className="content__row content__row--projects">
         <h2 className="heading heading--h2">{props.title}</h2>
-        <img className="content__row__image" src={props.image}></img>
+        <img
+          className="content__row__image content__row__image--projects"
+          src={props.image}
+        ></img>
         <CSSTransition
           in={toggleMenuVisibility}
           timeout={400}
