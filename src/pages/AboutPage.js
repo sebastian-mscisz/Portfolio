@@ -52,12 +52,12 @@ const AboutPage = () => {
                 na nowo co doprowadziło mnie do momentu, w którym jestem teraz.
               </p>
               <p className="content__row__text">
-                Z zamiłowania psiarz, a z zainteresowań jestem miłośnikiem
-                książek, gier i filmów z gatunku fantastyki. Lubię podróżować i
-                zwiedzać rożne zakątki i miasta Polski, w których jeszcze nie
-                byłem. Jestem również wielkim fanem rozwoju sztucznej
-                inteligencji i zaciekawieniem przyglądam się coraz to nowym
-                technologiom i postępom w tej dziedzinie.
+                Z zamiłowania psiarz, a z zainteresowań lubię czytać książki,
+                grać w gry gier oraz oglądać filmy z gatunku fantastyki. Lubię
+                podróżować i zwiedzać rożne zakątki i miasta Polski, w których
+                jeszcze nie byłem. Jestem również wielkim fanem rozwoju
+                sztucznej inteligencji i zaciekawieniem przyglądam się coraz to
+                nowym technologiom i postępom w tej dziedzinie.
               </p>
             </div>
           </div>
