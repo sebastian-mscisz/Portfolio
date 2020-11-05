@@ -45,6 +45,7 @@
     "react-gsap": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-transition-group": "^4.4.1",
+    "typeface-alegreya": "^1.1.13",
     "typeface-inter": "^3.15.0"
   }
 }

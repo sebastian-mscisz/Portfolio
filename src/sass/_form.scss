@@ -45,12 +45,9 @@
     transition: all 0.5s;
     @include for-size(tablet) {
       margin: 10px;
-      font-size: 0.9rem;
-      padding: 6px 8px;
-      width: 80px;
-    }
-    @include for-size(laptop) {
-      font-size: 1rem;
+      font-size: 1.4rem;
+      padding: 8px 10px;
+      width: 100px;
     }
     &:hover {
       background-color: darken(#333, 5%);

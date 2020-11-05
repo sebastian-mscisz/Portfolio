@@ -1,14 +1,19 @@
 .header {
-  height: 60px;
+  height: 70px;
   width: 100%;
   top: 0;
   position: sticky;
   z-index: 2;
   font-family: "Inter", Times, serif;
+  box-shadow: 0 0 5px 5px #323639;
+  @include for-size(tablet) {
+    height: 90px;
+  }
 }
 .header__row {
   display: flex;
   width: 100%;
+  height: 100%;
   flex-wrap: wrap;
 }
 .header__droplist {
@@ -43,34 +48,65 @@
 }
 
 .header__logo {
+  background-color: #323639;
   align-items: center;
   display: flex;
-  background-color: #323639;
   flex-grow: 1;
   color: #fefefe;
   padding-left: 15px;
   text-decoration: none;
-  height: 60px;
-  font-size: 1rem;
   transition: all 0.2s linear;
-  box-shadow: 0 0 5px 5px #323639;
   @include for-size(tablet) {
     padding-left: 5%;
-    font-size: 1.2rem;
   }
   @include for-size(desktop) {
     padding-left: 10%;
   }
   &:hover {
-    color: white;
+    color: #fefefe;
   }
   &__link {
-    color: white;
+    cursor: pointer;
+    color: #fefefe;
     text-decoration: none;
+    transition: color 500ms linear;
+    &:hover {
+      color: darken(#fefefe, 15%);
+      transition: color 500ms linear;
+    }
   }
   &__text {
-    width: fit-content;
+    font-size: 1.4rem;
+    font-family: Alegreya;
     font-style: italic;
+    @include for-size(tablet) {
+      font-size: 1.9rem;
+    }
+    &:hover {
+      animation: shake 0.7s cubic-bezier(0.36, 0.57, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      transition: all 500ms linear;
+    }
+  }
+}
+@keyframes shake {
+  0% {
+    transform: skewX(10deg);
+  }
+  20% {
+    transform: skewX(-8deg);
+  }
+  40% {
+    transform: skewX(6deg);
+  }
+  60% {
+    transform: skewX(-4deg);
+  }
+  80% {
+    transform: skewX(2deg);
+  }
+  100% {
+    transform: skewX(0deg);
   }
 }
 .header__menu {
@@ -86,11 +122,11 @@
     color: #fefefe;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: block;
     border-bottom: 1px solid transparent;
     @include for-size(tablet) {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
     &:hover {
       opacity: 1;
@@ -99,6 +135,7 @@
       transition: all 500ms linear;
       @include for-size(tablet) {
         background-color: inherit;
+        color: darken(#fefefe, 15%);
         border-bottom: 1px solid #fefefe;
       }
     }
@@ -108,7 +145,7 @@
     align-items: center;
     display: flex;
     height: 60px;
-    padding: 0 15px;
+    padding-right: 20px;
     background-color: #323639;
     box-shadow: 0 0 5px 5px #323639;
     @include for-size(tablet) {

@@ -37,8 +37,12 @@
     margin-right: 0;
   }
   &--skills {
-    background-color: rgba(50, 54, 57, 0.5);
-    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.5);
+    background-color: rgba(50, 54, 57, 0.8);
+    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
+  }
+  &--about {
+    background-color: rgba(50, 54, 57, 0.8);
+    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
   }
   &--technologies {
     flex-wrap: wrap;
@@ -59,7 +63,7 @@
   }
   &--projects {
     background-color: rgba(50, 54, 57, 0.5);
-    border: 1px solid rgba(254, 254, 254, 0.3);
+    border: 1px solid rgba(254, 254, 254, 0.5);
     border-radius: 25px;
     padding: 3px;
     margin-bottom: 5px;
@@ -82,27 +86,23 @@
   }
 }
 .content__row__text {
-  padding-top: 8px;
+  // padding-top: 8px;
   text-align: justify;
   color: #fefefe;
   font-family: "Inter";
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
   z-index: 1;
-  background-color: rgba(50, 54, 57, 0.8);
-  box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
   @include for-size(tablet) {
     padding: 10px;
   }
   @include for-size(laptop) {
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 1.7rem;
   }
   &--contact {
     text-align: center;
     margin: 10px 0;
-    background-color: transparent;
-    box-shadow: 0 0 0 0;
     & a {
       display: flex;
       justify-content: center;
@@ -120,17 +120,18 @@
     font-size: 0.9rem;
     @include for-size(tablet) {
       font-size: 1rem;
-      line-height: 1.2rem;
+      line-height: 1.5rem;
     }
     @include for-size(laptop) {
       font-size: 1.1rem;
-      line-height: 1.3rem;
+      line-height: 1.6rem;
     }
     @include for-size(desktop) {
       margin: 0 10%;
     }
   }
   &--skills {
+    padding-top: 8px;
     background-color: transparent;
     box-shadow: 0 0 0 0;
     text-align: left;
@@ -145,6 +146,7 @@
     margin: 0 0 6px 6px;
     @include for-size(tablet) {
       margin: 0 0 15px 15px;
+      width: 25%;
     }
     @include for-size(laptop) {
       margin: 0 0 25px 25px;
@@ -159,8 +161,9 @@
   }
 }
 .content__row__button {
+  cursor: pointer;
   color: #fefefe;
-  border: 2px solid rgba(254, 254, 254, 0.5);
+  border: 3px solid rgba(254, 254, 254, 0.5);
   background-color: rgba(50, 54, 57, 0.8);
   padding: 4px 8px;
   border-radius: 25px;
@@ -180,7 +183,7 @@
   &:hover {
     &:hover {
       background-color: darken(rgba(50, 54, 57, 0.8), 10%);
-      border: 2px solid lighten(rgba(50, 54, 57, 0.8), 20%);
+      border: 3px solid lighten(rgba(50, 54, 57, 0.8), 20%);
       color: darken(#fefefe, 15%);
     }
   }

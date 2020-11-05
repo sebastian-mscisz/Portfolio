@@ -21,7 +21,7 @@ const AboutPage = () => {
             <div className="content__row">
               <h1 className="heading">O mnie</h1>
             </div>
-            <div className="content__row">
+            <div className="content__row content__row--about">
               <p className="content__row__text">
                 <img
                   className="content__row__image content__row__image--about"
@@ -37,6 +37,7 @@ const AboutPage = () => {
                 wykonując własne niekomercyjne projekty oraz wspomagając się
                 internetowymi kursami, poradnikami oraz dokumentacją.
               </p>
+              <h3 className="heading heading--h3">Wykształcenie</h3>
               <p className="content__row__text">
                 Ukończyłem pierwszy stopień studiów stacjonarnych z tytułem
                 inżyniera na kierunku inżynierii systemów na Politechnice
@@ -44,6 +45,7 @@ const AboutPage = () => {
                 samego kierunku. Tematem mojej pracy inżynierskiej był system
                 inteligentnego domu oparty na systemie Arduino.
               </p>
+              <h3 className="heading heading--h3">Pierwsze kroki</h3>
               <p className="content__row__text">
                 Styczność z tworzeniem stron pierwszy raz miałem w technikum w
                 2013, jednak wtedy nie czułem jakoby było to coś co chciałbym
@@ -51,6 +53,7 @@ const AboutPage = () => {
                 jako web developer zainteresowanie to zostało u mnie wzbudzone
                 na nowo co doprowadziło mnie do momentu, w którym jestem teraz.
               </p>
+              <h3 className="heading heading--h3">Zainteresowania</h3>
               <p className="content__row__text">
                 Z zamiłowania psiarz, a z zainteresowań lubię czytać książki,
                 grać w gry gier oraz oglądać filmy z gatunku fantastyki. Lubię
