@@ -5,12 +5,6 @@ import { CSSTransition } from "react-transition-group";
 const NavBar = (props) => {
   return (
     <>
-      {/* <CSSTransition
-        in={props.toggleMenuVisibility}
-        timeout={700}
-        classNames="header__droplist"
-        unmountOnExit
-      > */}
       <div
         className={
           props.toggleMenuVisibility
@@ -19,21 +13,40 @@ const NavBar = (props) => {
         }
       >
         <div className="header__menu">
-          <NavLink to="/about" className="header__menu__item" exact>
+          <NavLink
+            to="/about"
+            className="header__menu__item"
+            exact
+            activeClassName="header__menu__item--active"
+          >
             O mnie
           </NavLink>
-          <NavLink to="/skills" className="header__menu__item" exact>
+          <NavLink
+            to="/skills"
+            className="header__menu__item"
+            exact
+            activeClassName="header__menu__item--active"
+          >
             Umiejętności
           </NavLink>
-          <NavLink to="/projects" className="header__menu__item" exact>
+          <NavLink
+            to="/projects"
+            className="header__menu__item"
+            exact
+            activeClassName="header__menu__item--active"
+          >
             Projekty
           </NavLink>
-          <NavLink to="/contact" className="header__menu__item" exact>
+          <NavLink
+            to="/contact"
+            className="header__menu__item"
+            exact
+            activeClassName="header__menu__item--active"
+          >
             Kontakt
           </NavLink>
         </div>
       </div>
-      {/* </CSSTransition> */}
     </>
   );
 };

@@ -24,6 +24,7 @@
     border-radius: 0.5em;
     @include for-size(tablet) {
       padding: 10px;
+      font-size: 1.2rem;
     }
     &--area {
       min-height: 100px;

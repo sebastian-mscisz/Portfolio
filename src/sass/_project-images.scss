@@ -1,0 +1,49 @@
+.project-image__wrap {
+  position: relative;
+  @include for-size(desktop) {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+.project-image__image {
+  width: 100%;
+  object-fit: contain;
+  @include for-size(desktop) {
+    border: 3px solid rgba(254, 254, 254, 0.5);
+    border-radius: 25px;
+  }
+}
+
+.project-image__text-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fefefe;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.project-image__wrap:hover .project-image__text-wrap {
+  visibility: visible;
+  opacity: 1;
+}
+.project-image__wrap:hover .project-image__image {
+  filter: blur(5px);
+}
+.project-image__text {
+  color: #fefefe;
+  font-size: 1.1rem;
+  transition: 0.4s;
+  transform: translateY(1em);
+}
+
+.project-image__wrap:hover .project-image__text {
+  transform: translateY(0);
+}

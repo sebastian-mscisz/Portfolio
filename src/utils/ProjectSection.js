@@ -10,21 +10,21 @@ const ProjectSection = (props) => {
     <>
       <div className="content__row content__row--projects">
         <h2 className="heading heading--h2">{props.title}</h2>
-        <img
-          className="content__row__image content__row__image--projects"
-          src={props.image}
-        ></img>
+        <div className="project-image__wrap">
+          <img className="project-image__image" src={props.image}></img>
+          <div className="project-image__text-wrap">
+            <a href={props.link} className="project-image__text">
+              <span className="fas fa-link"></span>&nbsp;{props.link}
+            </a>
+          </div>
+        </div>
         <CSSTransition
           in={toggleMenuVisibility}
           timeout={400}
           classNames="project-section-toggle"
           unmountOnExit
         >
-          <div>
-            {/* <p className="content__row__text content__row__text--projects"> */}
-            {props.text}
-            {/* </p> */}
-          </div>
+          <div>{props.text}</div>
         </CSSTransition>
         <button
           className="content__row__button"

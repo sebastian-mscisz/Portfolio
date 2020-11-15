@@ -29,6 +29,9 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"La Stravaganza"}
               image={lastravaganzaImage}
+              link={
+                "https://sebastian-mscisz.github.io/LaStravaganza-Project/#/"
+              }
               text={
                 <>
                   <p className="content__row__text content__row__text--projects">
@@ -68,6 +71,7 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"Tododo"}
               image={tododoImage}
+              link={"https://sebastian-mscisz.github.io/ToDoDo/#/"}
               text={
                 <>
                   <p className="content__row__text content__row__text--projects">
@@ -104,6 +108,7 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"Strona portfolio"}
               image={portfolioImage}
+              link={"http://localhost:8080/#/"}
               text={
                 <>
                   <p className="content__row__text content__row__text--projects">

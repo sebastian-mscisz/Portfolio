@@ -97,8 +97,9 @@
     padding: 10px;
   }
   @include for-size(laptop) {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    padding: 10px 25px;
   }
   &--contact {
     text-align: center;
@@ -123,8 +124,8 @@
       line-height: 1.5rem;
     }
     @include for-size(laptop) {
-      font-size: 1.1rem;
-      line-height: 1.6rem;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
     }
     @include for-size(desktop) {
       margin: 0 10%;
@@ -152,13 +153,15 @@
       margin: 0 0 25px 25px;
     }
   }
-  &--projects {
-    @include for-size(desktop) {
-      width: 70%;
-      margin-left: 15%;
-      margin-right: 15%;
-    }
-  }
+  // &--projects {
+  //   @include for-size(desktop) {
+  //     border: 2px solid rgba(254, 254, 254, 0.5);
+  //     border-radius: 25px;
+  //     width: 70%;
+  //     margin-left: 15%;
+  //     margin-right: 15%;
+  //   }
+  // }
 }
 .content__row__button {
   cursor: pointer;
