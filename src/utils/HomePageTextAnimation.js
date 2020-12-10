@@ -5,8 +5,8 @@ export const HomePageTextAnimation = (message) => {
   let wordIndex = 0;
   let textIndex = 0;
   let oldTime = 0;
-  const speed = 160; //czym większa wartość tym wolniejszy typing
-  const stop = 2000; //zatrzymanie między kolejnymi tekstami
+  const speed = 160; //higher value = slower typingczym większa wartość tym wolniejszy typing
+  const stop = 2000; //stopping time between texts
   let activeDOMElement = box;
 
   const typing = (newTime) => {

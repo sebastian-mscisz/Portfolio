@@ -7,8 +7,8 @@ const HomePage = () => {
   useEffect(() => {
     setTimeout(() => {
       HomePageTextAnimation(["Hello, friend.."]);
-    }, 1000);
-    PageAnimation();
+    }, 1000); //to start text-machine animation
+    PageAnimation(); //to start background animation
   });
   return (
     <>

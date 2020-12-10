@@ -5,6 +5,7 @@ import myImage from "../assets/me.png";
 
 const AboutPage = () => {
   useEffect(() => {
+    //to start background animation
     PageAnimation();
   });
   return (
@@ -30,7 +31,7 @@ const AboutPage = () => {
                 Nazywam się Sebastian Mścisz i jestem początkującym Front-End
                 deweloperem. Posiadam doświadczenie na stanowisku junior web
                 developer, gdzie do moich obowiązków i pracy należało m.in.
-                wprowadzenie zmian technicznych na serwisach klientów,
+                wprowadzanie zmian technicznych na serwisach klientów,
                 optymalizacja kodu, wprowadzanie zmian za pomocą wielu systemów
                 zarządzania treścią, a także optymalizowanie witryn pod kątem
                 wyszukiwarek internetowych. W pracy z React jestem samoukiem
@@ -43,7 +44,9 @@ const AboutPage = () => {
                 inżyniera na kierunku inżynierii systemów na Politechnice
                 Wrocławskiej oraz dalej kontynuuję naukę na drugim stopniu tego
                 samego kierunku. Tematem mojej pracy inżynierskiej był system
-                inteligentnego domu oparty na systemie Arduino.
+                inteligentnego domu oparty na systemie Arduino. A tematem pracy
+                magisterskiej jest "Techniki pozycjonowania witryn
+                internetowych".
               </p>
               <h3 className="heading heading--h3">Pierwsze kroki</h3>
               <p className="content__row__text">
@@ -56,11 +59,12 @@ const AboutPage = () => {
               <h3 className="heading heading--h3">Zainteresowania</h3>
               <p className="content__row__text">
                 Z zamiłowania psiarz, a z zainteresowań lubię czytać książki,
-                grać w gry gier oraz oglądać filmy z gatunku fantastyki. Lubię
-                podróżować i zwiedzać rożne zakątki i miasta Polski, w których
-                jeszcze nie byłem. Jestem również wielkim fanem rozwoju
-                sztucznej inteligencji i zaciekawieniem przyglądam się coraz to
-                nowym technologiom i postępom w tej dziedzinie.
+                grać w gry (planszowe i PC) oraz oglądać filmy z gatunku
+                fantastyki. Lubię podróżować oraz zwiedzać rożne zakątki i
+                miasta Polski, w których jeszcze nie byłem. Jestem również
+                wielkim fanem rozwoju sztucznej inteligencji i zaciekawieniem
+                przyglądam się coraz to nowym technologiom i postępom w tej
+                dziedzinie.
               </p>
             </div>
           </div>

@@ -3,6 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
   flex-grow: 1;
   background-size: cover;
@@ -37,12 +39,12 @@
     margin-right: 0;
   }
   &--skills {
-    background-color: rgba(50, 54, 57, 0.8);
-    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
+    background-color: rgba(38, 41, 43, 0.8);
+    box-shadow: 0 0 5px 5px rgba(38, 41, 43, 0.8);
   }
   &--about {
-    background-color: rgba(50, 54, 57, 0.8);
-    box-shadow: 0 0 5px 5px rgba(50, 54, 57, 0.8);
+    background-color: rgba(38, 41, 43, 0.8);
+    box-shadow: 0 0 5px 5px rgba(38, 41, 43, 0.8);
   }
   &--technologies {
     flex-wrap: wrap;
@@ -62,7 +64,7 @@
     }
   }
   &--projects {
-    background-color: rgba(50, 54, 57, 0.5);
+    background-color: rgba(38, 41, 43, 0.5);
     border: 1px solid rgba(254, 254, 254, 0.5);
     border-radius: 25px;
     padding: 3px;
@@ -83,6 +85,9 @@
   }
   &:last-child {
     margin-bottom: 20px;
+    @include for-size(desktop) {
+      margin-bottom: 50px;
+    }
   }
 }
 .content__row__text {
@@ -167,7 +172,7 @@
   cursor: pointer;
   color: #fefefe;
   border: 3px solid rgba(254, 254, 254, 0.5);
-  background-color: rgba(50, 54, 57, 0.8);
+  background-color: rgba(38, 41, 43, 0.8);
   padding: 4px 8px;
   border-radius: 25px;
   font-size: 0.8rem;
@@ -185,8 +190,8 @@
   }
   &:hover {
     &:hover {
-      background-color: darken(rgba(50, 54, 57, 0.8), 10%);
-      border: 3px solid lighten(rgba(50, 54, 57, 0.8), 20%);
+      background-color: darken(rgba(38, 41, 43, 0.8), 10%);
+      border: 3px solid lighten(rgba(38, 41, 43, 0.8), 20%);
       color: darken(#fefefe, 15%);
     }
   }

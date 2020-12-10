@@ -8,6 +8,7 @@ import { CSSTransition } from "react-transition-group";
 
 const SkillsPage = () => {
   useEffect(() => {
+    //to start background animation
     PageAnimation();
   });
   return (

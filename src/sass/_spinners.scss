@@ -1,0 +1,46 @@
+.message-icon {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #26292b;
+  z-index: 2;
+  border-radius: 50%;
+  padding: 5px;
+  border: 3px solid rgba(254, 254, 254, 0.5);
+  &--message {
+    min-width: 50px;
+    min-height: 100px;
+    border-radius: 15px;
+    @include for-size(tablet) {
+      min-width: 200px;
+      min-height: 200px;
+    }
+    @include for-size(laptop) {
+      min-width: 300px;
+      min-height: 300px;
+    }
+  }
+  &__text {
+    width: 100%;
+    color: #fefefe;
+    text-align: center;
+    font-size: 1.5rem;
+    @include for-size(tablet) {
+      font-size: 2rem;
+    }
+    @include for-size(laptop) {
+      font-size: 2.5rem;
+    }
+  }
+  &__icon {
+    font-size: 3rem;
+    @include for-size(tablet) {
+      font-size: 3.5rem;
+    }
+    @include for-size(laptop) {
+      font-size: 5rem;
+    }
+  }
+}

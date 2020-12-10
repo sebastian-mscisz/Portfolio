@@ -10,7 +10,7 @@ export const PageAnimation = () => {
     target,
     animateHeader = true;
 
-  // Main
+  // init animation
   initHeader();
   initAnimation();
   addListeners();
@@ -49,7 +49,7 @@ export const PageAnimation = () => {
         let p2 = points[j];
         if (!(p1 == p2)) {
           let placed = false;
-          for (let k = 0; k < 5; k++) {
+          for (let k = 0; k < 6; k++) {
             if (!placed) {
               if (closest[k] == undefined) {
                 closest[k] = p2;
@@ -58,7 +58,7 @@ export const PageAnimation = () => {
             }
           }
 
-          for (let k = 0; k < 5; k++) {
+          for (let k = 0; k < 6; k++) {
             if (!placed) {
               if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
                 closest[k] = p2;
@@ -82,7 +82,7 @@ export const PageAnimation = () => {
     }
   }
 
-  // Event handling
+  // events handling
   function addListeners() {
     // if (!"ontouchstart" in window) {
     //   window.addEventListener("mousemove", mouseMove);
@@ -179,7 +179,7 @@ export const PageAnimation = () => {
     });
   }
 
-  // Canvas manipulation
+  // canvas manipulation
   function drawLines(p) {
     if (!p.active) return;
     for (let i in p.closest) {
@@ -210,7 +210,7 @@ export const PageAnimation = () => {
     };
   }
 
-  // Util
+  // util
   function getDistance(p1, p2) {
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
   }

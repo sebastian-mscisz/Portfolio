@@ -10,7 +10,7 @@ const ProjectsPage = () => {
   useEffect(() => {
     setTimeout(() => {
       PageAnimation();
-    }, 300);
+    }, 300); //to start background animation
   });
   return (
     <>
@@ -47,7 +47,8 @@ const ProjectsPage = () => {
                     serwisu na końcu. Projekt wykorzystywał react router do
                     obsługi nawigacji po stronie, do stylizacji wyglądu użyto
                     Bootstrapa oraz font awesome, a do wykonywania animacji CSS
-                    transition group.
+                    transition group. Projekt został wykonany w react tylko za
+                    pomocą komponentów funkcyjnych i hooków.
                   </p>
                   <p className="content__row__text content__row__text--projects">
                     TLDR: Pierwszy projekt po kursach mający na celu

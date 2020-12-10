@@ -5,7 +5,7 @@
   position: sticky;
   z-index: 2;
   font-family: "Inter", Times, serif;
-  box-shadow: 0 0 5px 5px #323639;
+  box-shadow: 0 0 5px 5px #26292b;
   @include for-size(tablet) {
     height: 90px;
   }
@@ -37,8 +37,8 @@
     transform: none;
     width: auto;
     padding-right: 20px;
-    box-shadow: 0 0 5px 5px #323639;
-    background-color: #323639;
+    box-shadow: 0 0 5px 5px #26292b;
+    background-color: #26292b;
     transition: transform 0ms;
     padding-right: 5%;
   }
@@ -48,7 +48,7 @@
 }
 
 .header__logo {
-  background-color: #323639;
+  background-color: #26292b;
   align-items: center;
   display: flex;
   flex-grow: 1;
@@ -110,10 +110,10 @@
   }
 }
 .header__menu {
-  background-color: #323639;
+  background-color: #26292b;
   opacity: 0.95;
   width: 100%;
-  box-shadow: 0 0 5px 5px #323639;
+  box-shadow: 0 0 5px 5px #26292b;
   @include for-size(tablet) {
     opacity: 1;
     display: flex;
@@ -134,7 +134,7 @@
     }
     &:hover {
       opacity: 1;
-      background-color: lighten(#323639, 5%);
+      background-color: lighten(#26292b, 5%);
       color: white;
       transition: all 500ms linear;
       @include for-size(tablet) {
@@ -150,8 +150,8 @@
     display: flex;
     height: 60px;
     padding-right: 20px;
-    background-color: #323639;
-    box-shadow: 0 0 5px 5px #323639;
+    background-color: #26292b;
+    box-shadow: 0 0 5px 5px #26292b;
     @include for-size(tablet) {
       display: none;
     }

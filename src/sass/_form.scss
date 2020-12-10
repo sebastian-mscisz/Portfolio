@@ -55,4 +55,8 @@
       border: 3px solid lighten(#333, 20%);
     }
   }
+  &__error-text {
+    width: 100%;
+    color: red;
+  }
 }
