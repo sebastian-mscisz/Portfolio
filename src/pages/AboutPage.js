@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { PageAnimation } from "../utils/PageAnimation";
 import { CSSTransition } from "react-transition-group";
-import myImage from "../assets/me.png";
+import myImage from "../assets/me.jpg";
 
 const AboutPage = () => {
   useEffect(() => {
