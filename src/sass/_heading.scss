@@ -1,16 +1,16 @@
 .heading {
   color: #fefefe;
-  font-family: monospace;
+  font-family: inter;
   font-size: 2rem;
   margin: 20px 0;
   text-align: center;
   transition: all 300ms;
   @include for-size(tablet) {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin: 30px 0;
   }
   @include for-size(laptop) {
-    font-size: 4rem;
+    font-size: 2.6rem;
   }
   &--home {
     margin-top: 0;
@@ -21,11 +21,11 @@
     text-shadow: 0 0 4px #fefefe;
     @include for-size(tablet) {
       margin-left: 10%;
-      font-size: 3.4rem;
+      font-size: 2.8rem;
     }
     @include for-size(laptop) {
       margin-left: 15%;
-      font-size: 4.5rem;
+      font-size: 3.2rem;
     }
     @include for-size(desktop) {
       margin-left: 20%;
@@ -36,13 +36,13 @@
   }
   &--h2 {
     margin: 15px 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     @include for-size(tablet) {
-      font-size: 2.3rem;
+      font-size: 1.8rem;
       margin: 25px 0;
     }
     @include for-size(laptop) {
-      font-size: 2.8rem;
+      font-size: 2rem;
     }
   }
   &--h3 {
@@ -61,7 +61,7 @@
 }
 .heading-subtext {
   color: #fefefe;
-  font-family: monospace;
+  font-family: inter;
   font-size: 1.2rem;
   margin: 5px 0 5px 40px;
   width: 100%;
@@ -69,11 +69,11 @@
   text-shadow: 0 0 4px #fefefe;
   @include for-size(tablet) {
     margin-left: 10%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   @include for-size(laptop) {
     margin-left: 15%;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   @include for-size(desktop) {
     margin-left: 20%;

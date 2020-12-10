@@ -11,7 +11,11 @@ const ProjectSection = (props) => {
       <div className="content__row content__row--projects">
         <h2 className="heading heading--h2">{props.title}</h2>
         <div className="project-image__wrap">
-          <img className="project-image__image" src={props.image}></img>
+          <img
+            className="project-image__image"
+            srcSet={(props.imageSmall + " 990w", props.image + " 1920w")}
+            src={props.image}
+          ></img>
           <div className="project-image__text-wrap">
             <a href={props.link} className="project-image__text">
               <span className="fas fa-link"></span>&nbsp;{props.link}

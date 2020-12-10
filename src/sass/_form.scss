@@ -24,7 +24,6 @@
     border-radius: 0.5em;
     @include for-size(tablet) {
       padding: 10px;
-      font-size: 1.2rem;
     }
     &--area {
       min-height: 100px;
@@ -38,17 +37,17 @@
     margin-top: 10px;
     padding: 5px 10px 5px 10px;
     border-radius: 0.5em;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: #333;
     border: 3px solid lighten(#333, 10%);
-    font-family: monospace;
+    font-family: inter;
     color: #fefefe;
     transition: all 0.5s;
     @include for-size(tablet) {
       margin: 10px;
-      font-size: 1.4rem;
+      font-size: 1rem;
       padding: 8px 10px;
-      width: 100px;
+      width: 90px;
     }
     &:hover {
       background-color: darken(#333, 5%);

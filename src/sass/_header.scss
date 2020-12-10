@@ -6,9 +6,6 @@
   z-index: 2;
   font-family: "Inter", Times, serif;
   box-shadow: 0 0 5px 5px #26292b;
-  @include for-size(tablet) {
-    height: 90px;
-  }
 }
 .header__row {
   display: flex;
@@ -76,11 +73,11 @@
     }
   }
   &__text {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-family: Alegreya;
     font-style: italic;
     @include for-size(tablet) {
-      font-size: 1.9rem;
+      font-size: 1.4rem;
     }
     &:hover {
       animation: shake 0.7s cubic-bezier(0.36, 0.57, 0.19, 0.97) both;
@@ -122,11 +119,11 @@
     color: #fefefe;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: block;
     border-bottom: 1px solid transparent;
     @include for-size(tablet) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
     &--active {
       color: darken(#fefefe, 15%);

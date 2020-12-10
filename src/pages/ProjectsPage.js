@@ -4,7 +4,10 @@ import { CSSTransition } from "react-transition-group";
 import ProjectSection from "../utils/ProjectSection";
 import tododoImage from "../assets/tododo-image.png";
 import lastravaganzaImage from "../assets/lastravaganza-image.png";
-import portfolioImage from "../assets/portfolio-image.png";
+import portfolioImage from "../assets/portfolio-image.jpg";
+import tododoImageSmall from "../assets/tododo-image-small.png";
+import lastravaganzaImageSmall from "../assets/lastravaganza-image-small.png";
+import portfolioImageSmall from "../assets/portfolio-image-small.jpg";
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -29,6 +32,7 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"La Stravaganza"}
               image={lastravaganzaImage}
+              imageSmall={lastravaganzaImageSmall}
               link={
                 "https://sebastian-mscisz.github.io/LaStravaganza-Project/#/"
               }
@@ -72,6 +76,7 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"Tododo"}
               image={tododoImage}
+              imageSmall={tododoImageSmall}
               link={"https://sebastian-mscisz.github.io/ToDoDo/#/"}
               text={
                 <>
@@ -109,7 +114,8 @@ const ProjectsPage = () => {
             <ProjectSection
               title={"Strona portfolio"}
               image={portfolioImage}
-              link={"http://localhost:8080/#/"}
+              imageSmall={portfolioImageSmall}
+              link={"https://sebastian-mscisz.github.io/Portfolio/#/"}
               text={
                 <>
                   <p className="content__row__text content__row__text--projects">
