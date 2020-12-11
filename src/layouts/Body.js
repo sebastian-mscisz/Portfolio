@@ -5,6 +5,7 @@ import AboutPage from "../pages/AboutPage";
 import SkillsPage from "../pages/SkillsPage";
 import ProjectsPage from "../pages/ProjectsPage";
 import ContactPage from "../pages/ContactPage";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const Body = () => {
   return (
@@ -15,6 +16,8 @@ const Body = () => {
         <Route path="/skills" exact component={SkillsPage} />
         <Route path="/projects" exact component={ProjectsPage} />
         <Route path="/about" exact component={AboutPage} />
+        <Route path="/about" exact component={AboutPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     </>
   );
