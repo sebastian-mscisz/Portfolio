@@ -3,7 +3,8 @@ import { PageAnimation } from "../utils/PageAnimation";
 import { CSSTransition } from "react-transition-group";
 import emailjs, { init } from "emailjs-com";
 import Loader from "react-loader-spinner";
-init("user_xa3WlYYB7TtEOE3tSK1YB");
+//YOUR emailJS user key
+init(<-YOUR_EMAILJS_KEY->);
 
 const ContactPage = () => {
   useEffect(() => {
@@ -74,7 +75,7 @@ const ContactPage = () => {
       setLoadingSpinner(true); //<- for setting spinner in motion
 
       //emailJS library method, sends message to emailJS app, then resends it to given email
-      emailjs.send("service_ng6fbmj", "template_bie0vb7", templateParams).then(
+      emailjs.send(<-YOUR_SERVICE_KEY->, <-YOUR_TEMPLATE_KEY->, templateParams).then(
         function (response) {
           setLoadingSpinner(false); //<- for stopping spinner
           setSendSuccess(true); //<- for showing message sending success
@@ -115,7 +116,7 @@ const ContactPage = () => {
         {sendSuccess && (
           <div className="message-icon message-icon--message">
             <p className="message-icon__text">
-              <span class="message-icon__icon fa fa-check-circle"></span>
+              <span className="message-icon__icon fa fa-check-circle"></span>
             </p>
             <br />
             <p className="message-icon__text">Wysłano pomyślnie</p>
@@ -124,7 +125,7 @@ const ContactPage = () => {
         {sendFail && (
           <div className="message-icon message-icon--message">
             <p className="message-icon__text">
-              <span class="message-icon__icon fas fa-times-circle"></span>
+              <span className="message-icon__icon fas fa-times-circle"></span>
             </p>
             <br />
             <p className="message-icon__text">Nie udało się wysłać</p>

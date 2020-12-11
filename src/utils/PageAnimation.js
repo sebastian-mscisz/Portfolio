@@ -30,7 +30,7 @@ export const PageAnimation = () => {
     let pointNumber;
     if (window.innerWidth < 500) {
       pointNumber = 10;
-    } else pointNumber = 25;
+    } else pointNumber = 20;
     points = [];
     for (let x = 0; x < width; x = x + width / pointNumber) {
       for (let y = 0; y < height; y = y + height / pointNumber) {
@@ -84,9 +84,9 @@ export const PageAnimation = () => {
 
   // events handling
   function addListeners() {
-    // if (!"ontouchstart" in window) {
-    //   window.addEventListener("mousemove", mouseMove);
-    // }
+    if (!"ontouchstart" in window) {
+      window.addEventListener("mousemove", mouseMove);
+    }
     window.addEventListener("mousemove", mouseMove);
     window.addEventListener("scroll", scrollCheck);
     window.addEventListener("resize", resize);
@@ -120,7 +120,6 @@ export const PageAnimation = () => {
   function resize() {
     width = window.innerWidth;
     height = largeHeader[0].offsetHeight;
-
     canvas.width = width;
     canvas.height = height;
   }

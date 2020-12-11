@@ -1,11 +1,14 @@
 .header {
-  height: 70px;
+  height: 60px;
   width: 100%;
   top: 0;
   position: sticky;
   z-index: 2;
   font-family: "Inter", Times, serif;
   box-shadow: 0 0 5px 5px #26292b;
+  @include for-size(laptop) {
+    height: 70px;
+  }
 }
 .header__row {
   display: flex;
