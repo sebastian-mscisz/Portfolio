@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { PageAnimation } from "../utils/PageAnimation";
 import { CSSTransition } from "react-transition-group";
 import emailjs, { init } from "emailjs-com";
 import Loader from "react-loader-spinner";
 //YOUR emailJS user key
-init(>YOUR_USER_KEY<);
+init("user_key");
 
 const ContactPage = () => {
   useEffect(() => {
@@ -12,9 +12,9 @@ const ContactPage = () => {
     PageAnimation();
   });
   //state variables
-  const [nameInput, setNameInput] = useState("");
-  const [mailInput, setMailInput] = useState("");
-  const [contentInput, setContentInput] = useState("");
+  const nameInputRef = useRef(null);
+  const mailInputRef = useRef(null);
+  const contentInputRef = useRef(null);
   const [nameError, setNameError] = useState(false);
   const [mailError, setMailError] = useState(false);
   const [contentError, setContentError] = useState(false);
@@ -22,32 +22,20 @@ const ContactPage = () => {
   const [sendSuccess, setSendSuccess] = useState(false);
   const [sendFail, setSendFail] = useState(false);
 
-  //for handling input changes
-  const handleInputChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    if (name === "nameInput") {
-      setNameInput(value);
-    } else if (name === "mailInput") {
-      setMailInput(value);
-    } else if (name === "contentInput") {
-      setContentInput(value);
-    }
-  };
-
   //validation makes sure every input isn't empty
   const formValidation = () => {
     let login = false;
     let mail = false;
     let content = false;
     let correct = false;
-    if (nameInput.length > 0) {
+    console.log(nameInputRef.current.value);
+    if (nameInputRef.current.value.length > 0) {
       login = true;
     }
-    if (mailInput.length > 0) {
+    if (mailInputRef.current.value.length > 0) {
       mail = true;
     }
-    if (contentInput.length > 0) {
+    if (contentInputRef.current.value.length > 0) {
       content = true;
     }
     if (login && mail && content) {
@@ -68,14 +56,14 @@ const ContactPage = () => {
     if (validation.correct) {
       setLoadingSpinner(true);
       let templateParams = {
-        name: nameInput,
-        email: mailInput,
-        content: contentInput,
+        name: nameInputRef.current.value,
+        email: mailInputRef.current.value,
+        content: contentInputRef.current.value,
       };
       setLoadingSpinner(true); //<- for setting spinner in motion
 
       //emailJS library method, sends message to emailJS app, then resends it to given email
-      emailjs.send(>YOUR_SERVICE_KEY<, >YOUR_EMAILJS_TEMPLATE<, templateParams).then(
+      emailjs.send("service_name", "template_name", templateParams).then(
         function (response) {
           setLoadingSpinner(false); //<- for stopping spinner
           setSendSuccess(true); //<- for showing message sending success
@@ -88,15 +76,12 @@ const ContactPage = () => {
         }
       );
       //reseting states
-      setNameInput("");
-      setMailInput("");
-      setContentInput("");
       setNameError(false);
       setMailError(false);
       setContentError(false);
     } else {
       //setting which input is incorrect
-      setNameError(!validation.name);
+      setNameError(!validation.login);
       setMailError(!validation.mail);
       setContentError(!validation.content);
     }
@@ -144,7 +129,7 @@ const ContactPage = () => {
             </div>
             <div className="content__row">
               <p className="content__row__text  content__row__text--contact">
-                <a href="mailto:name@email.com">
+                <a href="mailto:sebastian.mscisz96@gmail.com">
                   <span className="font-icon font-icon--contact fas fa-envelope"></span>
                   &nbsp;
                   <span className="font-icon__link">
@@ -170,8 +155,7 @@ const ContactPage = () => {
             <div className="content__row content__row--form">
               <form className="form">
                 <input
-                  onChange={handleInputChange}
-                  value={nameInput}
+                  ref={nameInputRef}
                   name="nameInput"
                   className="form__input"
                   type="text"
@@ -181,8 +165,7 @@ const ContactPage = () => {
                   <p className="form__error-text">*Pole wymagane</p>
                 )}
                 <input
-                  onChange={handleInputChange}
-                  value={mailInput}
+                  ref={mailInputRef}
                   name="mailInput"
                   className="form__input"
                   type="text"
@@ -192,8 +175,7 @@ const ContactPage = () => {
                   <p className="form__error-text">*Pole wymagane</p>
                 )}
                 <textarea
-                  onChange={handleInputChange}
-                  value={contentInput}
+                  ref={contentInputRef}
                   name="contentInput"
                   className="form__input form__input--area"
                   type="text"
