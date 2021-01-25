@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import emailjs, { init } from "emailjs-com";
 import Loader from "react-loader-spinner";
 //YOUR emailJS user key
-init("user_key");
+init("userkey");
 
 const ContactPage = () => {
   useEffect(() => {
@@ -63,7 +63,7 @@ const ContactPage = () => {
       setLoadingSpinner(true); //<- for setting spinner in motion
 
       //emailJS library method, sends message to emailJS app, then resends it to given email
-      emailjs.send("service_name", "template_name", templateParams).then(
+      emailjs.send("service_key", "template_key", templateParams).then(
         function (response) {
           setLoadingSpinner(false); //<- for stopping spinner
           setSendSuccess(true); //<- for showing message sending success

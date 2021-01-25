@@ -5,9 +5,12 @@ import ProjectSection from "../utils/ProjectSection";
 import tododoImage from "../assets/tododo-image.png";
 import lastravaganzaImage from "../assets/lastravaganza-image.png";
 import portfolioImage from "../assets/portfolio-image.jpg";
+import wmImage from "../assets/wm-image.png";
 import tododoImageSmall from "../assets/tododo-image-small.png";
 import lastravaganzaImageSmall from "../assets/lastravaganza-image-small.png";
 import portfolioImageSmall from "../assets/portfolio-image-small.jpg";
+import wmImageSmall from "../assets/wm-image-small.png";
+
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -29,6 +32,28 @@ const ProjectsPage = () => {
             <div className="content__row">
               <h1 className="heading heading--projects">Projekty</h1>
             </div>
+            <ProjectSection
+              title={"Strona portfolio modelki Wiktorii Mołdawiak"}
+              image={wmImage}
+              imageSmall={wmImageSmall}
+              link={
+                "https://wiktoriamoldawiak.pl/"
+              }
+              text={
+                <>
+                  <p className="content__row__text content__row__text--projects">
+                    Strona postawiona na WordPressie dla fotomodelki Wiktorii. Jako szablon graficzny został wykorzystany darmowy motyw Photograph Freesia, który dostosowałem graficznie i strukturalnie, aby lepiej prezentował się do przedstawiania zdjęć i prac modelki. Dodatkowo wdrożono formularz kontaktowy jako kolejny kanał komunikacyjny z Wiktorią.
+                  </p>
+                  <p className="content__row__text content__row__text--projects">
+                    TLDR: Strona oparta na WordPressie.
+                  </p>
+                  <p className="content__row__text content__row__text--projects">
+                    Wykorzystano:
+                    <br />+ Wordpress z dostosowanym szablonem Photograph Freesia
+                  </p>
+                </>
+              }
+            />
             <ProjectSection
               title={"La Stravaganza"}
               image={lastravaganzaImage}
