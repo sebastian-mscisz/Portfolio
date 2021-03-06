@@ -42,7 +42,7 @@ export const PageAnimation = () => {
       }
     }
 
-    // for each point find the 5 closest points
+    // for each point find the 6 closest points
     for (let i = 0; i < points.length; i++) {
       // for each point
       let closest = [];
@@ -54,18 +54,13 @@ export const PageAnimation = () => {
           // do if point isnt equal to base point
           let placed = false;
           for (let k = 0; k < 6; k++) {
-            // insert first 5 elements into closest
+            // insert first 6 elements into closest
             if (!placed) {
               if (closest[k] == undefined) {
                 closest[k] = p2;
                 placed = true;
-              }
-            }
-          }
-          for (let k = 0; k < 6; k++) {
-            // compare closest elements with next points to check if they arent closer
-            if (!placed) {
-              if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+              } else if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                // compare closest elements with next points to check if they arent closer
                 // if they are, replace them
                 closest[k] = p2;
                 placed = true;
@@ -90,38 +85,16 @@ export const PageAnimation = () => {
 
   // events handling
   function addListeners() {
-    if (!"ontouchstart" in window) {
-      window.addEventListener("mousemove", mouseMove);
-    }
     window.addEventListener("mousemove", mouseMove);
-    window.addEventListener("scroll", scrollCheck);
     window.addEventListener("resize", resize);
   }
 
   function mouseMove(e) {
-    let posx = 0;
-    let posy = 0;
     if (e.pageX || e.pageY) {
-      posx = e.pageX;
-      posy = e.pageY;
-    } else if (e.clientX || e.clientY) {
-      // old code -- not used
-      posx =
-        e.clientX +
-        document.body.scrollLeft +
-        document.documentElement.scrollLeft;
-      posy =
-        e.clientY +
-        document.body.scrollTop +
-        document.documentElement.scrollTop;
+      // read mouse position and update target coordinates for animation
+      target.x = e.pageX;
+      target.y = e.pageY;
     }
-    target.x = posx; // read mouse position and update target coordinates for animation
-    target.y = posy;
-  }
-
-  function scrollCheck() {
-    if (document.body.scrollTop > height) animateHeader = false;
-    else animateHeader = true;
   }
 
   function resize() {
@@ -181,7 +154,7 @@ export const PageAnimation = () => {
       x: p.originX - 50 + Math.random() * 100, // shift point X coordinate in random direction in range of original position
       y: p.originY - 50 + Math.random() * 100, // shift point Y coordinate in random direction in range of original position
       ease: Circ.easeInOut, // animation style
-      onComplete: function () {
+      onComplete: () => {
         // on animation complete, start again
         shiftPoint(p);
       },
@@ -202,21 +175,16 @@ export const PageAnimation = () => {
   }
 
   function Circle(pos, rad, color) {
-    let _this = this;
-
-    // constructor
-    (function () {
-      _this.pos = pos || null; // circle position
-      _this.radius = rad || null; // circle radius
-      _this.color = color || null; // circle color
-    })();
+    this.pos = pos || null; // circle position
+    this.radius = rad || null; // circle radius
+    this.color = color || null; // circle color
 
     this.draw = function () {
       // draw circle method
-      if (!_this.active) return; // if circle isn't active, dont draw
+      if (!this.active) return; // if circle isn't active, dont draw
       ctx.beginPath();
-      ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false); // draw arc at given X,Y position, with given radius 2*PI - so its a circle
-      ctx.fillStyle = "rgba(118, 184, 207," + _this.active + ")"; // give circle a color with given alpha, so it will be visible or not
+      ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false); // draw arc at given X,Y position, with given radius 2*PI - so its a circle
+      ctx.fillStyle = "rgba(118, 184, 207," + this.active + ")"; // give circle a color with given alpha, so it will be visible or not
       ctx.fill();
     };
   }
